@@ -1,0 +1,21 @@
+//When a user registers with our API, we will need to do some basic checks to make sure they are using a valid email address, their password is long enough and password1 and password2 match before entering them in the database. We will create our own validation as well as using the validator package from NPM. Install it now:
+// Create a folder called validation in your root project directory and create two files there called 'checkForEmpty.js' and 'register.js'.
+
+//‘checkForEmpty.js’ contains a function which accepts a value and decides whether it is empty or not
+
+//  ‘register.js’ uses validator and the ‘ifEmpty’ function we just created in ‘checkForEmpty.js’ to ensure that all the entries entered by the user while registering are valid.
+
+// In our users.js file, bring in bcrypt, crypto, your database.js file and the validation functions we just created
+
+//  Using our validation functions we check that input from users is valid.
+
+//Using crypto.randomBytes, we generate a random token with a size of 48 bytes that we will use in the next tutorial to verify users email addresses
+
+// Next we'll add our database function which inserts the users email, password, registration date, token, the date the token was created, whether the user is verified or not and if the token has been used before. With a salt factor of 12 we hash the users password with bcrypt so that we don't just store it as plain text in the database.
+
+// ‘checkForEmpty.js’ contains a function which accepts a value and decides whether it is empty or not
+
+// In your users.js file, bring in bcrypt, crypto, your database.js file and the validation functions we just created.
+
+// Using our validation functions we check that input from users is valid.
+
